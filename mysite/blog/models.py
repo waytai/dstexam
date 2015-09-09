@@ -8,6 +8,7 @@ class BlogsPost(models.Model):
     timestamp = models.DateTimeField()
 
 class BlogPostAdmin(admin.ModelAdmin):
-    list_dispay = ('title', 'timestamp')
+    list_display = ('title', 'timestamp')
+    search_fields = ('title', 'timestamp')
 
 admin.site.register(BlogsPost, BlogPostAdmin)
